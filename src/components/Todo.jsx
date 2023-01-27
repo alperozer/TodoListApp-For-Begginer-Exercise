@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { GrFormClose, GrFormEdit, GrFormCheckmark } from 'react-icons/gr';
 import { useTodoLayerValue } from '../context/TodoContext';
 const Todo = ({ todo }) => {
-  const [{}, dispatch] = useTodoLayerValue();
+  const [{}, dispatch] = useTodoLayerValue(); // eslint-disable-line
   const [editable, setEditable] = useState(false);
   const [content, setContent] = useState(todo.content);
 
@@ -31,8 +31,8 @@ const Todo = ({ todo }) => {
   };
 
   const todoStyle = clsx({
-    ['todo-row']: true,
-    ['completed']: todo.isCompleted,
+    ['todo-row']: true, // eslint-disable-line
+    ['completed']: todo.isCompleted, // eslint-disable-line
   });
 
   return (
@@ -72,4 +72,3 @@ const Todo = ({ todo }) => {
 };
 
 export default Todo;
-
